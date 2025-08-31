@@ -1,0 +1,29 @@
+configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+aironet-31(config)#hostname aironet-31
+aironet-31(config)#dot11 ssid 31-welcome-ivan
+aironet-31(config-ssid)#vlan 31
+aironet-31(config-ssid)#authentication open
+aironet-31(config-ssid)#authentication key-management wpa
+aironet-31(config-ssid)#wpa-psk ascii C1sc0123
+aironet-31(config-ssid)#guest-mode
+aironet-31(config-ssid)#default Int Dot11Radio 0
+Cannot disable station-role
+
+Interface Dot11Radio0 set to default configuration
+aironet-31(config)#default interface gigabitEthernet 0
+%command not allowed, cannot remove bridge-group 1
+Interface GigabitEthernet0 set to default configuration
+aironet-31(config)#int dot11radio 0
+aironet-31(config-if)#no shut
+aironet-31(config-if)#channel 1
+aironet-31(config-if)#encryption mode ciphers tkip
+aironet-31(config-if)#encryption vlan 31 mode ciphers tkip
+aironet-31(config-if)#ssid 31-welcome-ivan
+aironet-31(config-if)#exit
+aironet-31(config)#interface dot11radio 0.31
+aironet-31(config-subif)#encapsulation dot1q 31 native
+aironet-31(config-subif)#bridge-group 1
+aironet-31(config-subif)#exit
+aironet-31(config)#end
+aironet-31#
