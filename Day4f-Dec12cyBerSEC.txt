@@ -30,6 +30,7 @@ CMD
 ping www.ngcpM.ph
 
 youporn.com
+            161.49.21
 pornhub.com 66.254.114.41
 redtube.com 66.254.114.23
 faketaxi.com 66.254.114.234
@@ -77,6 +78,7 @@ config t
 NO ip access-list standard NOPORNFAP
 ip access-list standard NOPORNFAP
 DENY 66.254.0.0 0.0.255.255
+DENY 161.49.0.0 0.0.255.255
 DENY 104.21.0.0 0.0.255.255
 DENY 68.235.0.0 0.0.255.255
 DENY 104.17.0.0 0.0.255.255
@@ -1038,6 +1040,7 @@ https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopback
 
 HomeWork for the Hardest Day in CCNA: 
 CSr, linuxdocker, pythondocker, Postman: RestApi.
+
 
 
 
